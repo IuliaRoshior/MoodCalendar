@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mood Calendar</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <main class="app">
+
+    <header class="hero">
+      <div>
+        <span class="eyebrow">MY DAILY JOURNAL</span>
+
+        <h1>
+          Mood<br>
+          <em>Calendar</em>
+        </h1>
+
+        <p>
+          Track your day and notice patterns in how you feel.
+        </p>
+      </div>
+
+      <div class="summary">
+        <div class="summary-number" id="monthAverage">—</div>
+
+        <div class="summary-label">
+          monthly<br>
+          mood average
+        </div>
+      </div>
+    </header>
+
+
+    <section class="calendar-card">
+
+      <div class="calendar-toolbar">
+
+        <button
+          class="nav-btn"
+          id="prevMonth"
+          aria-label="Previous month"
+        >
+          ‹
+        </button>
+
+        <div>
+          <h2 id="monthTitle"></h2>
+
+          <button class="today-btn" id="todayBtn">
+            Today
+          </button>
+        </div>
+
+        <button
+          class="nav-btn"
+          id="nextMonth"
+          aria-label="Next month"
+        >
+          ›
+        </button>
+
+      </div>
+
+
+      <div class="weekdays">
+        <span>Mon</span>
+        <span>Tue</span>
+        <span>Wed</span>
+        <span>Thu</span>
+        <span>Fri</span>
+        <span>Sat</span>
+        <span>Sun</span>
+      </div>
+
+
+      <div class="days" id="calendar"></div>
+
+    </section>
+
+
+    <section class="bottom-grid">
+
+      <div class="legend-card">
+
+        <h3>How are you feeling?</h3>
+
+        <div class="legend">
+
+          <button data-mood="5">
+            <span>😄</span>
+            Excellent
+          </button>
+
+          <button data-mood="4">
+            <span>🙂</span>
+            Good
+          </button>
+
+          <button data-mood="3">
+            <span>😐</span>
+            Okay
+          </button>
+
+          <button data-mood="2">
+            <span>😔</span>
+            Sad
+          </button>
+
+          <button data-mood="1">
+            <span>😣</span>
+            Difficult
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="note-card">
+
+        <h3 id="selectedDate">
+          Choose a day
+        </h3>
+
+        <textarea
+          id="note"
+          placeholder="What happened today? Write down a few thoughts..."
+          disabled
+        ></textarea>
+
+        <button
+          class="save-btn"
+          id="saveNote"
+          disabled
+        >
+          Save Entry
+        </button>
+
+      </div>
+
+    </section>
+
+
+    <p class="tip">
+      💡 Small observations can help you understand yourself better.
+    </p>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>
